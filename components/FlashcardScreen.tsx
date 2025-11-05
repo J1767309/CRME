@@ -142,6 +142,15 @@ const FlashcardScreen: React.FC<FlashcardScreenProps> = ({ questions, onExit }) 
           Next
         </button>
       </div>
+
+      <div className="mt-6 flex justify-center">
+        <button
+          onClick={onExit}
+          className="w-full max-w-md px-8 py-4 font-bold text-lg text-white bg-hsmai-green rounded-lg hover:bg-green-700 transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-green-300 shadow-lg"
+        >
+          Return to Home
+        </button>
+      </div>
     </div>
   );
 };

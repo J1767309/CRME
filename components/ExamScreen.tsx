@@ -7,9 +7,10 @@ interface ExamScreenProps {
   userAnswers: (number | null)[];
   onAnswerSelect: (questionIndex: number, answerIndex: number) => void;
   onSubmit: () => void;
+  onExit: () => void;
 }
 
-const ExamScreen: React.FC<ExamScreenProps> = ({ questions, userAnswers, onAnswerSelect, onSubmit }) => {
+const ExamScreen: React.FC<ExamScreenProps> = ({ questions, userAnswers, onAnswerSelect, onSubmit, onExit }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const EXAM_DURATION = 3600; // 60 minutes in seconds
 
@@ -99,6 +100,15 @@ const ExamScreen: React.FC<ExamScreenProps> = ({ questions, userAnswers, onAnswe
             Next
           </button>
         )}
+      </div>
+
+      <div className="mt-6 flex justify-center">
+        <button
+          onClick={onExit}
+          className="w-full max-w-md px-8 py-4 font-bold text-lg text-white bg-hsmai-green rounded-lg hover:bg-green-700 transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-green-300 shadow-lg"
+        >
+          Return to Home
+        </button>
       </div>
     </div>
   );

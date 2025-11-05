@@ -77,12 +77,12 @@ const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
         <h2 className="text-3xl font-bold text-slate-800 mb-6">Learning Resources</h2>
         <div className="space-y-6">
           <MediaPlayer
-            src="/media/hotel_revenue_optimization.m4a"
+            src="media/hotel_revenue_optimization.m4a"
             type="audio"
             title="From Logbooks to AI: Total Hotel Revenue Optimization"
           />
           <MediaPlayer
-            src="/media/science_of_hotel_pricing.mp4"
+            src="media/science_of_hotel_pricing.mp4"
             type="video"
             title="The Science of Hotel Pricing"
           />
