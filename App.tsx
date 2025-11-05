@@ -5,7 +5,6 @@ import StartScreen from './components/StartScreen';
 import ExamScreen from './components/ExamScreen';
 import ResultsScreen from './components/ResultsScreen';
 import FlashcardScreen from './components/FlashcardScreen';
-import { hsmaiLogo } from './assets/logo';
 
 // Function to shuffle an array and take the first N elements
 const shuffleAndTake = <T,>(array: T[], num: number): T[] => {
@@ -97,9 +96,6 @@ const App: React.FC = () => {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-4 bg-slate-100 font-sans">
-       <header className="w-full max-w-5xl mx-auto mb-6">
-         <img src={hsmaiLogo} alt="HSMAI Logo" className="h-16 mx-auto sm:mx-0" />
-       </header>
         <div className="w-full">
             {renderContent()}
         </div>
